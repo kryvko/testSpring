@@ -21,10 +21,10 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @RequestMapping("/")
+    @RequestMapping("/users")
     public String getUsers(Model model) {
         List<User> users = userRepository.findAll();
         model.addAttribute("users", users);
-        return "index";
+        return "users";
     }
 }
